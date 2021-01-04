@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
-    private SpriteRenderer theSR;
-    public Sprite defaultImage;
-    public Sprite pressedImage;
+    public Animator animator;
 
     public KeyCode key;
     // Start is called before the first frame update
     void Start()
     {
-        theSR = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -20,11 +17,11 @@ public class PlayerControl : MonoBehaviour
     {
         if (Input.GetKeyDown(key))
         {
-            theSR.sprite = pressedImage;
+            animator.SetBool("SlashDownLeft", true);
         }
         if (Input.GetKeyUp(key))
         {
-            theSR.sprite = defaultImage;
+            animator.SetBool("SlashDownLeft", true);
         }
     }
 }
