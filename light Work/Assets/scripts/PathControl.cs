@@ -26,9 +26,9 @@ public class PathControl : MonoBehaviour
         {
             m_Red = i;
 
-            m_Green = 1-i;
+            m_Green = 1;
 
-            m_Blue = 1;
+            m_Blue = 1-i;
 
             //Set the Color to the values gained by index
             m_NewColor = new Color(m_Red, m_Green, m_Blue);
