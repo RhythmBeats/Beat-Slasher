@@ -13,6 +13,9 @@ public class EnemyControl : MonoBehaviour
     public Transform spawnPoint6;
 
     public int i = 0;
+    public int Case;
+
+    public Sprite shuriken;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,33 +25,31 @@ public class EnemyControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        System.Random rand = new System.Random();
 
-        rand.Next(0, 10);
-
-        if (rand < 5)
+        Case = UnityEngine.Random.Range(0, 10);
+        if (Case < 5)
         {
             return;
         }
-        if(rand ==6)
+        if(Case == 6)
         {
-            Instantiate(gameObject, spawnPoint1);
+            Instantiate(shuriken, spawnPoint1);
         }
-        if (rand == 7)
+        if (Case == 7)
         {
-            Instantiate(gameObject, spawnPoint2);
+            Instantiate(shuriken, spawnPoint2);
         }
-        if (rand == 8)
+        if (Case == 8)
         {
-            Instantiate(gameObject, spawnPoint3);
+            Instantiate(shuriken, spawnPoint3);
         }
-        if (rand == 9)
+        if (Case == 9)
         {
-            Instantiate(gameObject, spawnPoint4);
+            Instantiate(shuriken, spawnPoint4);
         }
 
         i++;
-        if (i == 100)
+        if (i == 30)
         {
             Debug.Break();
         }
