@@ -216,6 +216,7 @@ GameObject:
   m_Component:
   - component: {fileID: 825528708}
   - component: {fileID: 825528707}
+  - component: {fileID: 825528706}
   m_Layer: 0
   m_Name: Spawn4
   m_TagString: Untagged
@@ -223,6 +224,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &825528706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825528705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379a78dac12b0ac47be7544a25eb8f32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myPrefab: {fileID: 4452154918948967826, guid: 9a222a0d850efbc48897a9d4154eba7b, type: 3}
 --- !u!212 &825528707
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -298,6 +312,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1099868644}
   - component: {fileID: 1099868643}
+  - component: {fileID: 1099868642}
   m_Layer: 0
   m_Name: Spawn5
   m_TagString: Untagged
@@ -305,6 +320,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1099868642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1099868641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea47ec9279a85b848ad140d988b62fb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myPrefab: {fileID: 4452154918948967826, guid: 9a222a0d850efbc48897a9d4154eba7b, type: 3}
 --- !u!212 &1099868643
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -380,6 +408,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1161788637}
   - component: {fileID: 1161788636}
+  - component: {fileID: 1161788635}
   m_Layer: 0
   m_Name: Spawn6
   m_TagString: Untagged
@@ -387,6 +416,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1161788635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161788634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cc466bd2e61ee647aa8fa0d576723b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myPrefab: {fileID: 4452154918948967826, guid: 9a222a0d850efbc48897a9d4154eba7b, type: 3}
 --- !u!212 &1161788636
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -722,8 +764,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2012606467}
   - component: {fileID: 2012606466}
-  - component: {fileID: 2012606469}
   - component: {fileID: 2012606468}
+  - component: {fileID: 2012606469}
   m_Layer: 0
   m_Name: char1_0
   m_TagString: Untagged
@@ -824,13 +866,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2012606465}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7da0e119694df640978fd8152d221db, type: 3}
+  m_Script: {fileID: 11500000, guid: 5fb0b997301af8444b707f5541df6d6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 2012606468}
-  key1: 273
-  key2: 274
-  sDL: 0
 --- !u!1 &2020492493
 GameObject:
   m_ObjectHideFlags: 0
@@ -841,6 +880,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2020492496}
   - component: {fileID: 2020492495}
+  - component: {fileID: 2020492494}
   m_Layer: 0
   m_Name: Spawn3
   m_TagString: Untagged
@@ -848,6 +888,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2020492494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020492493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8773049acb800d14297ccf47efc49a12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myPrefab: {fileID: 4452154918948967826, guid: 9a222a0d850efbc48897a9d4154eba7b, type: 3}
 --- !u!212 &2020492495
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -923,6 +976,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2108195275}
   - component: {fileID: 2108195274}
+  - component: {fileID: 2108195273}
   m_Layer: 0
   m_Name: Spawn2
   m_TagString: Untagged
@@ -930,6 +984,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2108195273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108195272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 544a3fbde3bd9f34cab8d5253f3dd7aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myPrefab: {fileID: 4452154918948967826, guid: 9a222a0d850efbc48897a9d4154eba7b, type: 3}
 --- !u!212 &2108195274
 SpriteRenderer:
   m_ObjectHideFlags: 0

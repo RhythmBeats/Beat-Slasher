@@ -57,18 +57,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\scripts\InstantiationExample.cs" />
-    <Compile Include="Assets\scripts\PlayerControl.cs" />
     <Compile Include="Assets\scripts\Spawn_5.cs" />
     <Compile Include="Assets\scripts\PathControl.cs" />
     <Compile Include="Assets\scripts\Spawn_1.cs" />
     <Compile Include="Assets\scripts\GameManager.cs" />
     <Compile Include="Assets\scripts\EnemyControl.cs" />
-    <Compile Include="Assets\scripts\InputManager.cs" />
     <Compile Include="Assets\scripts\ShurikenFly.cs" />
     <Compile Include="Assets\scripts\Spawn_6.cs" />
     <Compile Include="Assets\scripts\Spawn_4.cs" />
     <Compile Include="Assets\scripts\Spawn_2.cs" />
     <Compile Include="Assets\scripts\Spawn_3.cs" />
+    <Compile Include="Assets\scripts\swipe.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
