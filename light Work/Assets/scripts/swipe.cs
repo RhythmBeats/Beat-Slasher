@@ -40,25 +40,12 @@ public class swipe : MonoBehaviour
                     {   //Left or Right
                         if ((lp.x > fp.x))  //If the movement was to the right)
                         {   //Right swipe
-                            if (animator.GetBool("SlashRight") == false)
-                            {
-                                animator.SetBool("SlashRight", true);
-                            }
-                            else
-                            {
-                                animator.SetBool("SlashRight", false);
-                            }
+                            animator.SetTrigger("SlashRight");
+            
                         }
                         else
                         {   //Left swipe
-                            if (animator.GetBool("SlashLeft") == false)
-                            {
-                                animator.SetBool("SlashLeft", true);
-                            }
-                            else
-                            {
-                                animator.SetBool("SlashLeft", false);
-                            }
+                            animator.SetTrigger("SlashLeft");
                         }
                     }
                     else if (lp.x < fp.y && Mathf.Abs(lp.y - fp.y) > dragDistance) 
@@ -66,25 +53,11 @@ public class swipe : MonoBehaviour
                     {   
                         if (lp.y > fp.y)  //movement was upwards
                         {   //Top Left swipe
-                            if (animator.GetBool("SlashTopLeft") == false)
-                            {
-                                animator.SetBool("SlashTopLeft", true);
-                            }
-                            else
-                            {
-                                animator.SetBool("SlashTopLeft", false);
-                            }
+                            animator.SetTrigger("SlashTopLeft");
                         }
                         else
                         {   //Bottom Left swipe
-                            if (animator.GetBool("SlashDownLeft") == false)
-                            {
-                                animator.SetBool("SlashDownLeft", true);
-                            }
-                            else
-                            {
-                                animator.SetBool("SlashDownLeft", false);
-                            }
+                            animator.SetTrigger("SlashDownLeft");
                         }
                     }
                     else if (lp.x > fp.y && Mathf.Abs(lp.y - fp.y) > dragDistance)
@@ -92,25 +65,11 @@ public class swipe : MonoBehaviour
                     { 
                         if (lp.y > fp.y)  //movement was upwards
                         {   //Top Right swipe
-                            if (animator.GetBool("SlashTopRight") == false)
-                            {
-                                animator.SetBool("SlashTopRight", true);
-                            }
-                            else
-                            {
-                                animator.SetBool("SlashTopRight", false);
-                            }
+                           animator.SetTrigger("SlashTopRight");
                         }
                         else
                         {   //Bottom Right swipe
-                            if (animator.GetBool("SlashDownRight") == false)
-                            {
-                                animator.SetBool("SlashDownRight", true);
-                            }
-                            else
-                            {
-                                animator.SetBool("SlashDownRight", false);
-                            }
+                            animator.SetTrigger("SlashDownRight");
                         }
                     }
                 }
