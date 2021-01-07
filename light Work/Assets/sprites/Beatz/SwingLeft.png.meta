@@ -170,8 +170,8 @@ TextureImporter:
         y: 5
         width: 175
         height: 164
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.7654277, y: 0.41379946}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -191,8 +191,8 @@ TextureImporter:
         y: 16
         width: 185
         height: 153
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.78383, y: 0.37240276}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -208,12 +208,12 @@ TextureImporter:
       name: SwingLeft_2
       rect:
         serializedVersion: 2
-        x: 365
-        y: 4
+        x: 364
+        y: 3
         width: 151
         height: 165
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.75411683, y: 0.35312316}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -233,8 +233,8 @@ TextureImporter:
         y: 1
         width: 146
         height: 168
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.73976535, y: 0.33571067}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
