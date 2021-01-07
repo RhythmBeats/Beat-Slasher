@@ -33,6 +33,7 @@ public class RhythmController : MonoBehaviour
 
     public GameObject myPrefab;
 
+    public System.Random rnd = new System.Random();
 
     void Start()
     {
@@ -45,13 +46,11 @@ public class RhythmController : MonoBehaviour
     //Record the time when the music starts
     dspSongTime = (double)AudioSettings.dspTime;
 
-    beats = new List<double> {1, 3};
+    beats = new List<double> { 3.0, 5.0, 6.5, 11.0, 13.5, 14, 14.5, 15.5 };
     i = 0;
     //Start the music
     musicSource.Play();
-
-    
-        
+      
     }
 
     // Update is called once per frame
@@ -63,10 +62,39 @@ public class RhythmController : MonoBehaviour
     //determine how many beats since the song started
     songPositionInBeats = (songPosition / secPerBeat);
     
-    if (songPositionInBeats >= beats[i]-2){
-        i++;
-        Debug.Log(songPositionInBeats);
-        Instantiate(myPrefab, new Vector3((float)-2.324, 0, 0), Quaternion.identity);
+    if (songPositionInBeats >= beats[i] - 2)
+        {
+            i++;
+            Debug.Log(songPositionInBeats);
+            Instantiate(myPrefab, spawnLocation(), Quaternion.identity);
+        }
     }
+    public Vector3 spawnLocation()
+    {
+        int spawnPos = rnd.Next(1, 7);
+        switch (spawnPos)
+        {
+            case 1:
+                return new Vector3((float)-2.629758, 0, 0);
+                break;
+            case 2:
+                return new Vector3((float)2.629758, 0, 0);
+                break;
+            case 3:             
+                return new Vector3((float)1.275, (float)2.3, 0);
+                break;
+            case 4:
+                return  new Vector3((float)-1.275, (float)2.3, 0);
+                break;
+            case 5:
+                return new Vector3((float)1.275, (float)-2.3, 0);
+                break;
+            case 6:
+                return new Vector3((float)-1.275, (float)-2.3, 0);
+                break;
+            default:
+                return new Vector3((float)-1.275, (float)-2.3, 0);
+                break;
+        }
     }
 }
