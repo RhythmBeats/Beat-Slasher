@@ -10,6 +10,8 @@ public class ShurikenFly : MonoBehaviour
 
     public GameObject spawnPoint;
 
+    public int health; 
+
     Vector2 targetPosition = new Vector2(0, 0);
 
     public Vector2 originalPosition;
@@ -31,9 +33,20 @@ public class ShurikenFly : MonoBehaviour
         if (Time.time - startTime < 4f/3f)
         {
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
-             if(this.gameObject.transform.childCount > 0) transform.GetChild(0).Rotate(-Vector3.forward*speedRotate);
+            if(this.gameObject.transform.childCount > 0) transform.GetChild(0).Rotate(-Vector3.forward*speedRotate);
         }
-        else{
+        else
+        {
+            Destroy(gameObject);
+        }
+
+    }
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        Debug.Log("damage");
+        if (health <= 0)
+        {
             Destroy(gameObject);
         }
     }

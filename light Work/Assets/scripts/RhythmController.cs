@@ -79,7 +79,6 @@ public class RhythmController : MonoBehaviour
     if (songPositionInBeats >= beats[i] - 2)
         {
             i++;
-            Debug.Log(songPositionInBeats);
             Instantiate(myPrefab, SpawnLocation(), Quaternion.identity);
         }
     }
