@@ -1132,22 +1132,21 @@ MonoBehaviour:
   attackPos4: {fileID: 107568761}
   attackPos5: {fileID: 174309733}
   attackPos6: {fileID: 1983165523}
-  attackRangeX1: 0.3
+  attackRangeX1: 0.1
   attackRangeY1: 0.6
-  attackRangeX2: 0.3
+  attackRangeX2: 0.1
   attackRangeY2: 0.6
-  attackRangeX3: 0.3
+  attackRangeX3: 0.1
   attackRangeY3: 0.6
-  attackRangeX4: 0.3
+  attackRangeX4: 0.1
   attackRangeY4: 0.6
-  attackRangeX5: 0.3
+  attackRangeX5: 0.1
   attackRangeY5: 0.6
-  attackRangeX6: 0.3
+  attackRangeX6: 0.1
   attackRangeY6: 0.6
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 256
-  damage: 5
 --- !u!61 &2012606470
 BoxCollider2D:
   m_ObjectHideFlags: 0

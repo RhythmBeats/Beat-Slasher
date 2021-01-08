@@ -30,24 +30,18 @@ public class ShurikenFly : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.time - startTime < 4f/3f)
+        if (gameObject != null)
         {
-            transform.position = Vector2.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
-            if(this.gameObject.transform.childCount > 0) transform.GetChild(0).Rotate(-Vector3.forward*speedRotate);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+            if (Time.time - startTime < 4f / 3f)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
+                if (this.gameObject.transform.childCount > 0) transform.GetChild(0).Rotate(-Vector3.forward * speedRotate);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
 
-    }
-    public void TakeDamage(int damage)
-    {
-        health -= damage;
-        Debug.Log("damage");
-        if (health <= 0)
-        {
-            Destroy(gameObject);
         }
     }
 }

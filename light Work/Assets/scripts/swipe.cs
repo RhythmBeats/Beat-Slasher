@@ -9,6 +9,12 @@ public class swipe : MonoBehaviour
     private Vector3 lp;   //Last touch position
     private float dragDistance;  //minimum distance for a swipe to be registered
 
+    Collider2D closest1;
+    Collider2D closest2;
+    Collider2D closest3;
+    Collider2D closest4;
+    Collider2D closest5;
+    Collider2D closest6;
 
     public Transform attackPos1;
     public Transform attackPos2;
@@ -29,7 +35,6 @@ public class swipe : MonoBehaviour
     public float attackRangeX6;
     public float attackRangeY6;
     public LayerMask whatIsEnemies;
-    public int damage;
     void Start()
     {
         dragDistance = Screen.height * 5 / 100; //dragDistance is 5% height of the screen
@@ -63,20 +68,36 @@ public class swipe : MonoBehaviour
                         {   //Right swipe
                             animator.SetTrigger("SlashRight");
                             Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attackPos1.position, new Vector2(attackRangeX1, attackRangeY1), whatIsEnemies);
+                            if (enemiesToDamage.Length != 0)
+                            {
+                                closest1 = enemiesToDamage[0];
+                            }
                             for (int i = 0; i < enemiesToDamage.Length; i++)
                             {
-                                enemiesToDamage[i].GetComponent<ShurikenFly>().TakeDamage(damage);
+                                if (enemiesToDamage[i].transform.position.x < closest1.transform.position.x)
+                                {
+                                    closest1 = enemiesToDamage[i];
+                                }
                             }
-            
+                            if (closest1.transform.parent.gameObject != null) Destroy(closest1.transform.parent.gameObject);
                         }
                         else
                         {   //Left swipe
                             animator.SetTrigger("SlashLeft");
                             Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attackPos2.position, new Vector2(attackRangeX2, attackRangeY2), whatIsEnemies);
+                            if (enemiesToDamage.Length != 0)
+                            {
+                                closest2 = enemiesToDamage[0];
+                            }
                             for (int i = 0; i < enemiesToDamage.Length; i++)
                             {
-                                enemiesToDamage[i].GetComponent<ShurikenFly>().TakeDamage(damage);
+                                if (enemiesToDamage[i].transform.position.x > closest2.transform.position.x)
+                                {
+                                    closest2 = enemiesToDamage[i];
+                                }
                             }
+                           
+                            if(closest2.transform.parent.gameObject != null) Destroy(closest2.transform.parent.gameObject);
                         }
                     }
                     else if (lp.x < fp.y && Mathf.Abs(lp.y - fp.y) > dragDistance) 
@@ -86,19 +107,35 @@ public class swipe : MonoBehaviour
                         {   //Top Left swipe
                             animator.SetTrigger("SlashTopLeft");
                             Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attackPos3.position, new Vector2(attackRangeX3, attackRangeY3),135f, whatIsEnemies);
+                            if (enemiesToDamage.Length != 0)
+                            {
+                                closest3 = enemiesToDamage[0];
+                            }
                             for (int i = 0; i < enemiesToDamage.Length; i++)
                             {
-                                enemiesToDamage[i].GetComponent<ShurikenFly>().TakeDamage(damage);
+                                if (enemiesToDamage[i].transform.position.x > closest3.transform.position.x)
+                                {
+                                    closest3 = enemiesToDamage[i];
+                                }
                             }
+                            if (closest3.transform.parent.gameObject != null) Destroy(closest3.transform.parent.gameObject);
                         }
                         else
                         {   //Bottom Left swipe
                             animator.SetTrigger("SlashDownLeft");
                             Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attackPos4.position, new Vector2(attackRangeX4, attackRangeY4),225f, whatIsEnemies);
+                            if (enemiesToDamage.Length != 0)
+                            {
+                                closest4 = enemiesToDamage[0];
+                            }
                             for (int i = 0; i < enemiesToDamage.Length; i++)
                             {
-                                enemiesToDamage[i].GetComponent<ShurikenFly>().TakeDamage(damage);
+                                if (enemiesToDamage[i].transform.position.x > closest4.transform.position.x)
+                                {
+                                    closest4 = enemiesToDamage[i];
+                                }
                             }
+                            if (closest4.transform.parent.gameObject != null) Destroy(closest4.transform.parent.gameObject);
                         }
                     }
                     else if (lp.x > fp.y && Mathf.Abs(lp.y - fp.y) > dragDistance)
@@ -108,19 +145,35 @@ public class swipe : MonoBehaviour
                         {   //Top Right swipe
                            animator.SetTrigger("SlashTopRight");
                             Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attackPos5.position, new Vector2(attackRangeX5, attackRangeY5),45f, whatIsEnemies);
+                            if (enemiesToDamage.Length != 0)
+                            {
+                                closest5 = enemiesToDamage[0];
+                            }
                             for (int i = 0; i < enemiesToDamage.Length; i++)
                             {
-                                enemiesToDamage[i].GetComponent<ShurikenFly>().TakeDamage(damage);
+                                if (enemiesToDamage[i].transform.position.x < closest5.transform.position.x)
+                                {
+                                    closest5 = enemiesToDamage[i];
+                                }
                             }
+                            if (closest5.transform.parent.gameObject != null) Destroy(closest5.transform.parent.gameObject);
                         }
                         else
                         {   //Bottom Right swipe
                             animator.SetTrigger("SlashDownRight");
                             Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attackPos6.position, new Vector2(attackRangeX6, attackRangeY6),315f, whatIsEnemies);
+                            if (enemiesToDamage.Length != 0)
+                            {
+                                closest6 = enemiesToDamage[0];
+                            }
                             for (int i = 0; i < enemiesToDamage.Length; i++)
                             {
-                                enemiesToDamage[i].GetComponent<ShurikenFly>().TakeDamage(damage);
+                                if (enemiesToDamage[i].transform.position.x < closest6.transform.position.x)
+                                {
+                                    closest6 = enemiesToDamage[i];
+                                }
                             }
+                            if (closest6.transform.parent.gameObject != null) Destroy(closest6.transform.parent.gameObject);
                         }
                     }
                 }
@@ -130,15 +183,5 @@ public class swipe : MonoBehaviour
                 }
             }
         }
-    }
-    void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(attackPos1.position, new Vector3(attackRangeX1, attackRangeY1, 1));
-        Gizmos.DrawWireCube(attackPos2.position, new Vector3(attackRangeX2, attackRangeY2, 1));
-        Gizmos.DrawWireCube(attackPos3.position, new Vector3(attackRangeX3, attackRangeY3, 1));
-        Gizmos.DrawWireCube(attackPos4.position, new Vector3(attackRangeX4, attackRangeY4, 1));
-        Gizmos.DrawWireCube(attackPos5.position, new Vector3(attackRangeX5, attackRangeY5, 1));
-        Gizmos.DrawWireCube(attackPos6.position, new Vector3(attackRangeX6, attackRangeY6, 1));
     }
 }
