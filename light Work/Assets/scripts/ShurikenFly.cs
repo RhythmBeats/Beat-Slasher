@@ -31,7 +31,7 @@ public class ShurikenFly : MonoBehaviour
         if (Time.time - startTime < 4f/3f)
         {
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
-             if(this.gameObject.transform.childCount > 0) transform.GetChild(0).Rotate(-Vector3.forward*2);
+             if(this.gameObject.transform.childCount > 0) transform.GetChild(0).Rotate(-Vector3.forward*speedRotate);
         }
         else{
             Destroy(gameObject);

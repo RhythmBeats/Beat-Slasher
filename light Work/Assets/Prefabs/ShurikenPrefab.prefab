@@ -100,7 +100,6 @@ MonoBehaviour:
   speedRotate: 0
   spawnPoint: {fileID: 0}
   originalPosition: {x: 0, y: 0}
-  destroy: 0
 --- !u!1 &4452154918948967826
 GameObject:
   m_ObjectHideFlags: 0
@@ -146,10 +145,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.5298185
-  speedRotate: 1
+  speedRotate: 1.5
   spawnPoint: {fileID: 0}
   originalPosition: {x: 0, y: 0}
-  destroy: 0
 --- !u!1 &5985915219810467755
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,4 +247,3 @@ MonoBehaviour:
   speedRotate: 0
   spawnPoint: {fileID: 0}
   originalPosition: {x: 0, y: 0}
-  destroy: 0
