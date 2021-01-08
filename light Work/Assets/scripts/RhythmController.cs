@@ -80,10 +80,10 @@ public class RhythmController : MonoBehaviour
         {
             i++;
             Debug.Log(songPositionInBeats);
-            Instantiate(myPrefab, spawnLocation(), Quaternion.identity);
+            Instantiate(myPrefab, SpawnLocation(), Quaternion.identity);
         }
     }
-    public Vector3 spawnLocation()
+    public Vector3 SpawnLocation()
     {
         int spawnPos = rnd.Next(1, 7);
         switch (spawnPos)
