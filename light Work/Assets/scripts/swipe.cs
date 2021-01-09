@@ -71,15 +71,17 @@ public class swipe : MonoBehaviour
                             if (enemiesToDamage.Length != 0)
                             {
                                 closest1 = enemiesToDamage[0];
-                            }
-                            for (int i = 0; i < enemiesToDamage.Length; i++)
-                            {
-                                if (enemiesToDamage[i].transform.position.x < closest1.transform.position.x)
+
+                                for (int i = 0; i < enemiesToDamage.Length; i++)
                                 {
-                                    closest1 = enemiesToDamage[i];
+                                    if (enemiesToDamage[i].transform.position.x < closest1.transform.position.x)
+                                    {
+                                        closest1 = enemiesToDamage[i];
+                                    }
                                 }
+                                if (closest1.transform.parent.gameObject != null) Destroy(closest1.transform.parent.gameObject);
                             }
-                            if (closest1.transform.parent.gameObject != null) Destroy(closest1.transform.parent.gameObject);
+                            
                         }
                         else
                         {   //Left swipe
@@ -88,16 +90,16 @@ public class swipe : MonoBehaviour
                             if (enemiesToDamage.Length != 0)
                             {
                                 closest2 = enemiesToDamage[0];
-                            }
-                            for (int i = 0; i < enemiesToDamage.Length; i++)
-                            {
-                                if (enemiesToDamage[i].transform.position.x > closest2.transform.position.x)
+
+                                for (int i = 0; i < enemiesToDamage.Length; i++)
                                 {
-                                    closest2 = enemiesToDamage[i];
+                                    if (enemiesToDamage[i].transform.position.x < closest2.transform.position.x)
+                                    {
+                                        closest2 = enemiesToDamage[i];
+                                    }
                                 }
+                                if (closest2.transform.parent.gameObject != null) Destroy(closest2.transform.parent.gameObject);
                             }
-                           
-                            if(closest2.transform.parent.gameObject != null) Destroy(closest2.transform.parent.gameObject);
                         }
                     }
                     else if (lp.x < fp.y && Mathf.Abs(lp.y - fp.y) > dragDistance) 
@@ -110,15 +112,16 @@ public class swipe : MonoBehaviour
                             if (enemiesToDamage.Length != 0)
                             {
                                 closest3 = enemiesToDamage[0];
-                            }
-                            for (int i = 0; i < enemiesToDamage.Length; i++)
-                            {
-                                if (enemiesToDamage[i].transform.position.x > closest3.transform.position.x)
+
+                                for (int i = 0; i < enemiesToDamage.Length; i++)
                                 {
-                                    closest3 = enemiesToDamage[i];
+                                    if (enemiesToDamage[i].transform.position.x < closest3.transform.position.x)
+                                    {
+                                        closest3 = enemiesToDamage[i];
+                                    }
                                 }
+                                if (closest3.transform.parent.gameObject != null) Destroy(closest3.transform.parent.gameObject);
                             }
-                            if (closest3.transform.parent.gameObject != null) Destroy(closest3.transform.parent.gameObject);
                         }
                         else
                         {   //Bottom Left swipe
@@ -127,15 +130,16 @@ public class swipe : MonoBehaviour
                             if (enemiesToDamage.Length != 0)
                             {
                                 closest4 = enemiesToDamage[0];
-                            }
-                            for (int i = 0; i < enemiesToDamage.Length; i++)
-                            {
-                                if (enemiesToDamage[i].transform.position.x > closest4.transform.position.x)
+
+                                for (int i = 0; i < enemiesToDamage.Length; i++)
                                 {
-                                    closest4 = enemiesToDamage[i];
+                                    if (enemiesToDamage[i].transform.position.x < closest4.transform.position.x)
+                                    {
+                                        closest4 = enemiesToDamage[i];
+                                    }
                                 }
+                                if (closest4.transform.parent.gameObject != null) Destroy(closest4.transform.parent.gameObject);
                             }
-                            if (closest4.transform.parent.gameObject != null) Destroy(closest4.transform.parent.gameObject);
                         }
                     }
                     else if (lp.x > fp.y && Mathf.Abs(lp.y - fp.y) > dragDistance)
@@ -148,15 +152,16 @@ public class swipe : MonoBehaviour
                             if (enemiesToDamage.Length != 0)
                             {
                                 closest5 = enemiesToDamage[0];
-                            }
-                            for (int i = 0; i < enemiesToDamage.Length; i++)
-                            {
-                                if (enemiesToDamage[i].transform.position.x < closest5.transform.position.x)
+
+                                for (int i = 0; i < enemiesToDamage.Length; i++)
                                 {
-                                    closest5 = enemiesToDamage[i];
+                                    if (enemiesToDamage[i].transform.position.x < closest5.transform.position.x)
+                                    {
+                                        closest5 = enemiesToDamage[i];
+                                    }
                                 }
+                                if (closest5.transform.parent.gameObject != null) Destroy(closest5.transform.parent.gameObject);
                             }
-                            if (closest5.transform.parent.gameObject != null) Destroy(closest5.transform.parent.gameObject);
                         }
                         else
                         {   //Bottom Right swipe
@@ -165,15 +170,16 @@ public class swipe : MonoBehaviour
                             if (enemiesToDamage.Length != 0)
                             {
                                 closest6 = enemiesToDamage[0];
-                            }
-                            for (int i = 0; i < enemiesToDamage.Length; i++)
-                            {
-                                if (enemiesToDamage[i].transform.position.x < closest6.transform.position.x)
+
+                                for (int i = 0; i < enemiesToDamage.Length; i++)
                                 {
-                                    closest6 = enemiesToDamage[i];
+                                    if (enemiesToDamage[i].transform.position.x < closest6.transform.position.x)
+                                    {
+                                        closest6 = enemiesToDamage[i];
+                                    }
                                 }
+                                if (closest6.transform.parent.gameObject != null) Destroy(closest6.transform.parent.gameObject);
                             }
-                            if (closest6.transform.parent.gameObject != null) Destroy(closest6.transform.parent.gameObject);
                         }
                     }
                 }
