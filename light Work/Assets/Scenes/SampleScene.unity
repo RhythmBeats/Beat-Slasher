@@ -132,7 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 107568761}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: attackBox4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,7 +162,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 108490486}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: attackBox3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,7 +192,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 140036882}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: attackBox1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -222,7 +222,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 174309733}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: attackBox5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -982,7 +982,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1983165523}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: attackBox6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1016,7 +1016,7 @@ GameObject:
   - component: {fileID: 2012606468}
   - component: {fileID: 2012606469}
   - component: {fileID: 2012606470}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: char1_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1133,17 +1133,17 @@ MonoBehaviour:
   attackPos5: {fileID: 174309733}
   attackPos6: {fileID: 1983165523}
   attackRangeX1: 0.1
-  attackRangeY1: 0.6
+  attackRangeY1: 0.2
   attackRangeX2: 0.1
-  attackRangeY2: 0.6
+  attackRangeY2: 0.2
   attackRangeX3: 0.1
-  attackRangeY3: 0.6
+  attackRangeY3: 0.2
   attackRangeX4: 0.1
-  attackRangeY4: 0.6
+  attackRangeY4: 0.2
   attackRangeX5: 0.1
-  attackRangeY5: 0.6
+  attackRangeY5: 0.2
   attackRangeX6: 0.1
-  attackRangeY6: 0.6
+  attackRangeY6: 0.2
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 256
@@ -1171,7 +1171,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.71, y: 1.47}
+  m_Size: {x: 0.05, y: 0.05}
   m_EdgeRadius: 0
 --- !u!1 &2020492493
 GameObject:
@@ -1264,7 +1264,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2022329172}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: attackBox2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -94,7 +94,6 @@ public class swipe : MonoBehaviour
                                         closest = enemiesToDamage[i];
                                     }
                                 }
-                                Debug.Log(enemiesToDamage.Length);
                                 if (closest.transform.parent.gameObject != null) Destroy(closest.transform.parent.gameObject);
                             }
                             
@@ -183,7 +182,7 @@ public class swipe : MonoBehaviour
                 }
                 else
                 {   //It's a tap as the drag distance is less than 20% of the screen height
-                    Debug.Log("Tap");
+                    //Debug.Log("Tap");
                 }
             }
         }
